@@ -1,0 +1,41 @@
+.MovieDataContainer {
+  display: flex;
+
+  padding: 10px 15px;
+  gap: 20px;
+}
+
+.MovieTitle {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.info {
+  font-weight: 400;
+}
+
+.subHeader {
+  font-size: 20px;
+}
+
+.backLink {
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: rgb(31, 26, 26);
+}
+
+.backLink:hover,
+.backLink:active,
+.backLink:focus {
+  color: black;
+  font-weight: 500;
+}

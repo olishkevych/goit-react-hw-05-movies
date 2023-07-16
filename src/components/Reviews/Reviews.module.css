@@ -1,0 +1,31 @@
+.ReviewList {
+  margin-top: 15px;
+  list-style: none;
+  padding: 15px 15px;
+}
+
+.Author,
+.Text {
+  margin: 0;
+}
+
+.Author {
+  font-weight: 500;
+}
+
+.Text {
+  margin-top: 10px;
+}
+
+.Review {
+  text-decoration: none;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 0 16px #302c5a;
+  font-size: 14px;
+  padding: 20px 20px;
+  color: #302c5a;
+  object-fit: cover;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  margin-bottom: 15px;
+}
