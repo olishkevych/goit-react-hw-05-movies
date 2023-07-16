@@ -1,4 +1,3 @@
-import { Loader } from 'components/Loader/Loader';
 import { MovieGallery } from 'components/MovieGallery/MovieGallery';
 import useFetchTrendingMovies from 'hooks/useFetchTrendingMovies';
 import { ToastContainer, toast } from 'react-toastify';
