@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
 import { MovieDetails } from './MovieDetails/MovieDetails';
 
 import css from './App.module.css';
@@ -31,6 +31,7 @@ export const App = () => {
               <Route path="cast" element={<Cast />}></Route>
               <Route path="reviews" element={<Reviews />}></Route>
             </Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Suspense>
       </main>

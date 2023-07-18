@@ -11,6 +11,13 @@ export const MovieDetailsEl = ({ movie }) => {
   const backLinkHref = useRef(location.state?.from ?? '/');
 
   const year = release_date.substring(0, 4);
+  const poster = poster_path
+    ? `https://image.tmdb.org/t/p/w200/${poster_path}`
+    : placeholder;
+  const genresList =
+    genres.length > 0 ? genres.map(genre => genre.name).join(', ') : '';
+  const overviewData = overview ? overview : '';
+  const ratingData = vote_average.toFixed(1);
 
   return (
     <div>
@@ -22,15 +29,7 @@ export const MovieDetailsEl = ({ movie }) => {
         <div className={css.MovieDataContainer}>
           <div>
             {' '}
-            <img
-              alt={title}
-              src={
-                poster_path
-                  ? `https://image.tmdb.org/t/p/w200/${poster_path}`
-                  : placeholder
-              }
-              width="200"
-            />{' '}
+            <img alt={title} src={poster} width="200" />{' '}
           </div>
           <div>
             <h1 className={css.MovieTitle}> {title}</h1>
@@ -38,23 +37,12 @@ export const MovieDetailsEl = ({ movie }) => {
               Release: <span className={css.info}>{year}</span>
             </p>
             <p className={css.heading}>
-              Rating:{' '}
-              <span className={css.info}>{vote_average.toFixed(1)}</span>
+              Rating:
+              <span className={css.info}>{ratingData}</span>
             </p>
-
-            {overview && (
-              <>
-                <h2 className={css.subHeader}> Overview</h2>
-                <p> {overview}</p>
-              </>
-            )}
-
-            {genres && (
-              <>
-                <h2 className={css.subHeader}> Genres</h2>{' '}
-                <p> {genres.map(genre => genre.name).join(', ')}</p>
-              </>
-            )}
+            <p className={css.subHeader}> Overview</p>
+            <p> {overviewData}</p>
+            <p className={css.subHeader}> Genres</p> <p> {genresList}</p>
           </div>
         </div>
       )}

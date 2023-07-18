@@ -19,12 +19,13 @@ const Movies = () => {
 
   const handleSumbit = event => {
     event.preventDefault();
-    const searchQuery = event.target.children.searchText.value;
+    const searchQuery = event.target.children.searchText.value
+      .toLowerCase()
+      .trim();
     if (searchQuery) {
       event.target.reset();
-      const searchText = searchQuery.toLowerCase();
       setSearchParams({
-        query: searchText,
+        query: searchQuery,
       });
     } else {
       toast.error('Enter search text', toastConfig);
