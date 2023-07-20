@@ -26,7 +26,9 @@ const Reviews = () => {
             <p className={css.Text}>{review.content}</p>
           </li>
         ))}
-      {reviews.length === 0 && <p>No reviews left yet</p>}
+      {reviews.length === 0 && (
+        <p> className={css.CenterText}No reviews left yet</p>
+      )}
     </ul>
   );
 };

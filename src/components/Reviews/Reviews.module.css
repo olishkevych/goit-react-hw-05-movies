@@ -29,3 +29,7 @@
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   margin-bottom: 15px;
 }
+
+.CenterText {
+  text-align: center;
+}

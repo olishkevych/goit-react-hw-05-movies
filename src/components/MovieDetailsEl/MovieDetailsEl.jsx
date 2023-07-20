@@ -37,7 +37,7 @@ export const MovieDetailsEl = ({ movie }) => {
               Release: <span className={css.info}>{year}</span>
             </p>
             <p className={css.heading}>
-              Rating:
+              Rating: 
               <span className={css.info}>{ratingData}</span>
             </p>
             <p className={css.subHeader}> Overview</p>
